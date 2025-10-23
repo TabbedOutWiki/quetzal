@@ -1,7 +1,6 @@
-{{- $cdnBase := cond hugo.IsProduction "https://cdn.tabbedout.wiki/images/" "/assets/" -}}
 {{- $parsed := urls.Parse .Destination -}}
 {{- if not $parsed.IsAbs -}}
-<img src='{{ printf "%s%s" $cdnBase .Destination | safeURL }}'
+<img src="{{ .Destination | safeURL }}"
   {{- with .PlainText }} alt="{{ . }}"{{ end -}}
   {{- with .Title }} title="{{ . }}"{{ end -}}
 >{{- /* chomp trailing newline */ -}}
