@@ -1,5 +1,22 @@
 /content
 
+# Assets (Allowed: SVG for icons)
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.bmp
+*.raw
+*.pdf
+*.gif
+*.mp4
+*.webm
+*.mp3
+*.wav
+*.aac
+*.flac
+*.ogg
+
 # Builds
 public/
 .hugo_build.lock
