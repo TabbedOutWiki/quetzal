@@ -71,11 +71,10 @@ details[open] > summary {
   background: var(--bg-selected);
 }
 
-details ol,
-details ul {
+details[open]::details-content {
   border-left: 1px dashed var(--border-item);
   margin-left: 0.75rem;
-  padding: 0.25rem 0 0.25rem 0.75rem;
+  padding-left: 0.75rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {

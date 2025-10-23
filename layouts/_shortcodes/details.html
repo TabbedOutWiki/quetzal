@@ -25,24 +25,6 @@ Renders an HTML details element.
 
   {{< details summary="Styled Content" class="my-custom-class" >}}
   Content can be styled with CSS by specifying a `class`.
-
-  Target details element:
-
-  ```css
-  details.my-custom-class { }
-  ```
-
-  Target summary element:
-
-  ```css
-  details.my-custom-class > summary > * { }
-  ```
-
-  Target inner content:
-
-  ```css
-  details.my-custom-class > :not(summary) { }
-  ```
   {{< /details >}}
 
   {{< details summary="Grouped Details" name="my-details" >}}
