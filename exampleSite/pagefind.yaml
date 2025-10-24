@@ -1,0 +1,7 @@
+site: public
+output_subdir: pagefind
+exclude_selectors:
+  - "code"
+  - "meter"
+  - "[class='highlight']"
+  - ".tooltip-display"

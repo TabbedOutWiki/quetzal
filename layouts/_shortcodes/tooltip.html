@@ -1,1 +1,2 @@
 <span class="tooltip">{{ .Get 0 | safeHTML }}<div class="tooltip-display text-popup">{{ .Get 1 | safeHTML }}</div></span>
+{{ .Page.Store.Set "hasTooltip" true }}

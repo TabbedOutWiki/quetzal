@@ -1,4 +1,5 @@
 <title>{{ .Title }} - {{ .Site.Title }}</title>
+<link rel="canonical" href="{{ .Permalink }}">
 <meta name="description" content="{{ .Description }}">
 {{- if hugo.IsProduction -}}
   <meta name="google" content="sitelinkssearchbox">

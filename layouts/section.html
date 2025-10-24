@@ -5,7 +5,7 @@
       {{ partial "components/breadcrumbs.html" . }}
       <article class="content">
         <div class="content-upper">
-          <header><h1 id="#content" class="content-title"><a href="#content">{{ .Title }}</a></h1></header>
+          <header><h1 id="#content" class="content-title" data-pagefind-meta="title"><a href="#content">{{ .Title }}</a></h1></header>
           <ul class="page-tools">
             {{- with .Site.Params.repository }}
               {{- $path := page.File.Path }}

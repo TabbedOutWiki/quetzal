@@ -5,7 +5,3 @@
 {{ partialCached "head/favicon.html" . }}
 <!-- Global resources -->
 {{ partialCached "head/resources.html" . }}
-<!-- Libraries -->
-{{ if .Params.renderMath }}
-  {{ partialCached "js/math.html" . }}
-{{ end }}

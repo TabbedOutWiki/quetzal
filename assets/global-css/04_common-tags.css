@@ -20,6 +20,7 @@ kbd {
   border-radius: var(--border-radius);
 }
 
+/* Quote */
 blockquote::before {
   color: var(--tx-subtle);
 }
@@ -88,24 +89,6 @@ details[open]::details-content {
   details[open]::details-content {
     height: auto;
   }
-}
-
-/* Text Input Search */
-input[type="search"] {
-  color: var(--tx-primary);
-  background-color: var(--bg-interactive);
-  border-radius: 25px;
-  outline: none;
-  border: none;
-}
-
-input[type="search"]:focus {
-  background-color: var(--bg-selected);
-  border-radius: 0;
-}
-
-input[type="search"]::placeholder {
-  color: var(--tx-placeholder);
 }
 
 /* Dropdown select */

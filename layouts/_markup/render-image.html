@@ -3,5 +3,6 @@
 <img src="{{ .Destination | safeURL }}"
   {{- with .PlainText }} alt="{{ . }}"{{ end -}}
   {{- with .Title }} title="{{ . }}"{{ end -}}
+  data-pagefind-index-attrs="title,alt"
 >{{- /* chomp trailing newline */ -}}
 {{- end -}}

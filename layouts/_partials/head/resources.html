@@ -11,10 +11,4 @@
 <!-- Critical JS -->
 {{- $criticalJS := resources.Get "critical.js" | minify -}}
 {{- with $criticalJS }}<script>{{ .Content | safeJS }}</script>{{- end }}
-<!-- Global JS -->
-{{ with resources.Match "global-js/*" }}
-  {{ with resources.Concat "js/global.js" . | minify | fingerprint  }}
-    <script src="{{ .RelPermalink }}" defer></script>
-  {{ end }}
-{{ end }}
 <!-- Preload / load fonts here -->

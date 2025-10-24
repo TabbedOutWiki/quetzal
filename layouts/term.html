@@ -4,12 +4,12 @@
     <main class="main-content">
       <article class="content">
         <div class="content-upper">
-          <header><h1 id="#content" class="content-title"><a href="#content">{{ .Title }}</a></h1></header>
+          <header><h1 id="#content" class="content-title" data-pagefind-meta="title"><a href="#content">{{ .Title }}</a></h1></header>
           <ul class="page-tools">
             <li class="page-tool"><a class="button" href="https://github.com" target="_blank" rel="external">{{ i18n "edit" }}</a></li>
           </ul>
         </div>
-        <div class="content-body">
+        <div class="content-body" data-pagefind-body>
           {{ .Content }}
           {{ range .Pages }}
             <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
