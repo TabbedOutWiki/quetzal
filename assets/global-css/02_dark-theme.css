@@ -11,22 +11,22 @@
 
   /* Backgrounds */
   --bg-navigation: var(--bg-primary);
-  --bg-primary: #121010;
-  --bg-content: #1a1818;
+  --bg-primary: #18191d;
+  --bg-content: var(--bg-primary);
   --bg-footer: var(--bg-navigation);
 
-  --bg-item: #232121;
-  --bg-interactive: #252323;
-  --bg-hover: #292727;
-  --bg-selected: #2c2a2a;
+  --bg-item: #212223;
+  --bg-interactive: #232425;
+  --bg-hover: #272829;
+  --bg-selected: #2a2b2c;
 
   --bg-modal: #0a0a0a;
   --bg-tooltip: #0f0f0f;
 
   /* Darkest -> brightest */
-  --border-item: #363434;
-  --border-interactive: #3f3d3d;
-  --border-content: #626060;
+  --border-item: #343536;
+  --border-interactive: #3d3e3f;
+  --border-content: #606162;
 
   --accent: #ec5959;
   --shadow: #080808;

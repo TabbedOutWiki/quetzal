@@ -13,6 +13,5 @@ Here is a list of stuff to do
 * Add ticket and report methods (suggest edit, report issue, devs contact to have content stalled or removed, legal contact)
 * Fix recent changes to work properly
 * Footer social / community links
-* Make sidebars sticky
 * Fix tabbed infoboxes
 * Handle image hosting either via Backblaze B2 or local files

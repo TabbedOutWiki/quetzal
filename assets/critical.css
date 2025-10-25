@@ -16,6 +16,7 @@
   */
 :root {
   --site-header-height: 3rem;
+  --site-header-padding: 1rem;
   --max-width: 1920px;
   --gutter: 1rem;
 
@@ -37,11 +38,6 @@
 
 *, *::before, *::after {
   box-sizing: border-box;
-}
-
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
 }
 
 input, button, textarea, select {
@@ -206,6 +202,10 @@ button, .button {
   min-height: calc(100vh - var(--site-header-height));
 }
 
+.main-content {
+  padding-top: var(--site-header-padding);
+}
+
 .content .content-title,
 .content-body h1,
 .content-body h2 {
@@ -314,13 +314,6 @@ button, .button {
   margin: 0 auto;
 }
 
-.shell .main-content,
-.shell .sidebar,
-.shell .utils {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
 .page-wrapper .main-content,
 .page-wrapper .sidebar,
 .page-wrapper .utils {
@@ -344,11 +337,16 @@ button, .button {
 
   margin: 0 auto;
   max-width: var(--max-width);
+  padding: 0.5em var(--gutter);
 
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 0.5em var(--gutter);
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.logo, .logo-img {
+  display: block;
 }
 
 .site-action-toggle {
@@ -363,7 +361,8 @@ button, .button {
   display: flex;
   flex-wrap: wrap;
   font-size: var(--fs);
-  padding: 0.25rem 1rem;
+  padding: 0.25rem 0;
+  overflow-x: hidden;
   gap: 0.25rem;
 }
 
@@ -391,6 +390,7 @@ button, .button {
 
 .footer-list ul {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -420,11 +420,11 @@ button, .button {
   /* Sticky sidebar */
   .sidebar-container .utils,
   .sidebar-container .sidebar {
-    --offset: calc(var(--site-header-height) + 1rem);
     position: sticky;
-    max-height: calc(100vh - var(--offset));
-    top: var(--offset);
+    max-height: calc(100vh - var(--site-header-height));
+    top: var(--site-header-height);
     overflow-y: auto;
+    padding-top: var(--site-header-padding);
   }
 
   /* Table of contents */

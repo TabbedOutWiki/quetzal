@@ -12,8 +12,8 @@
 
   /* Backgrounds */
   --bg-navigation: var(--bg-primary);
-  --bg-primary: #f7f5f5;
-  --bg-content: #faf8f8;
+  --bg-primary: #fcfafa;
+  --bg-content: var(--bg-primary);
   --bg-footer: var(--bg-navigation);
 
   --bg-item: #f2f0f0;
