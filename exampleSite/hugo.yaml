@@ -30,7 +30,7 @@ params:
     twitch: ""
     reddit: ""
   wiki:
-    discord: "https://discord.com/invite/vFhdguXT"
+    discord: ""
   tabbedout:
     docURL: "https://tabbedout.wiki/"
     cdnURL: "https://cdn.tabbedout.wiki/"
