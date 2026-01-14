@@ -1,0 +1,56 @@
+# Builds
+public/
+.hugo_build.lock
+
+# IDE
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Binaries for programs and plugins
+*.bin
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary
+*.test
+
+# Code coverage profiles and other test artifacts
+*.out
+coverage.*
+*.coverprofile
+profile.cov
+
+# Go workspace file
+go.work
+go.work.sum
+
+# Git backup files
+go.mod.bak
+go.sum.bak
+
+# dependencies
+/node_modules
+
+# Etc
+.env
+.env.production
+yarn-debug.log*
+yarn-error.log*
+_githistory.json
+.DS_Store
+*.log
+
+# Just in case
+dist/
+bin/
+tmp/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+/build
+/public

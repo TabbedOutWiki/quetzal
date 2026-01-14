@@ -1,0 +1,32 @@
+<div class="top-nav">
+  <div class="nav-logo">
+    <a class="logo" href="{{ site.Home.Permalink }}">
+      <img class="logo-img" width="80" height="32" src="/logo.svg" alt="">
+    </a>
+  </div>
+  {{ partialCached "components/searchform.html" . }}
+  <div class="site-actions">
+    <button id="SearchButtonOpen" class="button frameless" type="button" aria-label="{{ i18n "sr_search" }}">
+      <span class="button-wrapper">
+        <span class="icon icon-search"></span>
+        <span class="sr-only">{{ i18n "sr_search" }}</span>
+      </span>
+    </button>
+    <button id="SiteActionMenuOpen" class="button frameless" type="button" aria-label="{{ i18n "nav_page_actions" }}">
+      <span class="button-wrapper">
+        <span class="icon icon-menu"></span>
+        <span class="sr-only">{{ i18n "sr_main_menu_open" }}</span>
+      </span>
+    </button>
+    <ul class="site-action-menu">
+      <li class="site-action-menu-item">
+        {{ partialCached "components/theme-switch.html" . }}
+      </li class="site-action-menu-item">
+      {{ if .IsTranslated }}
+      <li>
+        {{ partial "components/language-switch.html" . }}
+      </li class="site-action-menu-item">
+      {{ end }}
+    </ul>
+  </div>
+</div>

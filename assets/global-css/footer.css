@@ -1,0 +1,29 @@
+.footer-wrapper {
+  font-size: var(--fxs);
+  padding: var(--gutter);
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--fxs);
+  color: var(--tx-aside);
+  background-color: var(--bg-footer);
+  padding: var(--gutter);
+}
+
+.footer-wrapper a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.footer-wrapper a:hover {
+  color: var(--accent);
+}
+
+.footer-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}

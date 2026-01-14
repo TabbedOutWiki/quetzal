@@ -1,0 +1,39 @@
+/* YouTube */
+.yt-thumbnail {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 0.5rem;
+  max-width: 480px;
+  background: #0a0a0a;
+  border-radius: 12px;
+}
+
+.yt-thumbnail img {
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  max-width: 100%;
+  height: auto;
+}
+
+.yt-thumbnail .play-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: rgba(0,0,0,0.75);
+  width: 20%;
+  height: 20%;
+  border-radius: 12px;
+}
+
+.yt-thumbnail .play-button svg {
+  width: 25%;
+  height: auto;
+}
+
+.yt-thumbnail:hover .play-button {
+  background: #FF0000;
+}

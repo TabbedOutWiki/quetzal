@@ -1,0 +1,111 @@
+/* Tasklists */
+/* Hugo seems to lack render hooks to add classes to these */
+ul li:has(input[type=checkbox][disabled]:first-child) {
+  list-style-type: none;
+  position: relative;
+}
+
+ul li input[type=checkbox][disabled]:first-child {
+  position: absolute;
+  right: 100%;
+}
+
+/* Quote */
+blockquote {
+  display: inline-grid;
+  grid-template-areas:
+    "mark quote mark2"
+    "blank cite audio"; /* Included "audio" grid area for future use with the audio player */
+  margin: 0.5rem 0 0.5rem 1rem;
+  padding: 0.5rem;
+  font-family: var(--font-quote);
+}
+
+blockquote::before {
+  color: var(--tx-subtle);
+  grid-area: mark;
+  content: open-quote;
+  font-size: var(--fxxxl);
+  margin-right: 1rem;
+}
+
+blockquote::after {
+  color: var(--tx-subtle);
+  grid-area: mark2;
+  content: close-quote;
+  font-size: var(--fxxxl);
+  margin-left: 1rem;
+}
+
+blockquote cite {
+  grid-area: cite;
+  text-align: center;
+  margin-top: -1rem;
+}
+
+blockquote p {
+  grid-area: quote;
+}
+
+blockquote, q {
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+/* Alerts */
+.alert {
+  border-left-width: 3px;
+  border-left-style: solid;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+}
+
+.alert p:last-child {
+  margin-block-end: 0;
+}
+
+.alert-title {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  gap: 3px;
+}
+
+.alert.alert-note {
+  border-color: var(--alert-note);
+}
+
+.alert.alert-note .alert-title {
+  color: var(--alert-note);
+}
+
+.alert.alert-tip {
+  border-color: var(--alert-tip);
+}
+
+.alert.alert-tip .alert-title {
+  color: var(--alert-tip);
+}
+
+.alert.alert-important {
+  border-color: var(--alert-important);
+}
+
+.alert.alert-important .alert-title {
+  color: var(--alert-important);
+}
+
+.alert.alert-warning {
+  border-color: var(--alert-warning);
+}
+
+.alert.alert-warning .alert-title {
+  color: var(--alert-warning);
+}
+
+.alert.alert-caution {
+  border-color: var(--alert-caution);
+}
+
+.alert.alert-caution .alert-title {
+  color: var(--alert-caution);
+}

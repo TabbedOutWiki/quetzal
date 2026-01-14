@@ -1,0 +1,44 @@
+{{ $parent := .CurrentSection.Parent }}
+{{ $current := .CurrentSection }}
+{{ if and $parent $current }}
+  {{ $others := where $parent.Sections "Permalink" "ne" $current.Permalink }}
+  {{ $sections := union (slice $current) $others }}
+  <aside class="sidebar">
+    <details open>
+      <summary>{{ $parent.Title }}</summary>
+      <ul>
+        {{ range $sections }}
+          <li>
+            {{ if eq . $current }}
+              <details open>
+                <summary>{{ .Title }}</summary>
+                <ol>
+                  {{ range .Pages }}
+                    <li>
+                      <a href="{{ .RelPermalink }}" {{ if eq .Permalink $.Permalink }}class="current" aria-current="page"{{ end }}>
+                        {{ .Title }}
+                      </a>
+                    </li>
+                  {{ end }}
+                </ol>
+              </details>
+            {{ else }}
+              <details>
+                <summary>{{ .Title }}</summary>
+                <ol>
+                  {{ range .Pages }}
+                    <li>
+                      <a href="{{ .RelPermalink }}">
+                        {{ .Title }}
+                      </a>
+                    </li>
+                  {{ end }}
+                </ol>
+              </details>
+            {{ end }}
+          </li>
+        {{ end }}
+      </ul>
+    </details>
+  </aside>
+{{ end }}

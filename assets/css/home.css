@@ -1,0 +1,75 @@
+.homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  color: #fafafa;
+  background-color: var(--bg-item);
+  background-image: url('/pattern/hexagons.svg');
+  text-shadow: 2px 2px 2px #000;
+
+  width: 100%;
+  height: 280px;
+
+  overflow-x: auto;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.homepage-body {
+  max-width: 1280px;
+  width: 100%;
+}
+
+.section-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.section-links a {
+  color: var(--tx-primary);
+}
+
+.section-panel {
+  text-align: center;
+  border: 1px solid var(--border-item);
+  margin: 0;
+}
+
+.section-panel img {
+  background-color: var(--bg-item);
+}
+
+.homepage-content {
+  border: 1px solid var(--border-item);
+  text-align: left;
+  padding: 1rem;
+}
+
+/* Socials */
+#DiscordButton {
+  color: #fff;
+  font-weight: bold;
+  background-color: #5865F2;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+}

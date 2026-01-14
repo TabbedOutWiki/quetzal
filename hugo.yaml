@@ -1,0 +1,14 @@
+module:
+  hugoVersion:
+    min: '0.147.9'
+  mounts:
+    - source: archetypes
+      target: archetypes
+    - source: assets
+      target: assets
+    - source: i18n
+      target: i18n
+    - source: layouts
+      target: layouts
+    - source: static
+      target: static

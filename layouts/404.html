@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="page-wrapper">
+  <div class="shell category-article">
+    <main class="main-content">
+      <article class="content">
+        <div class="content-upper">
+          <header><h1 id="#content" class="content-title"><a href="#content">{{ .Title }}</a></h1></header>
+          <ul class="page-tools">
+            <li class="page-tool"><a class="button" href="https://github.com" target="_blank" rel="external">{{ i18n "edit" }}</a></li>
+          </ul>
+        </div>
+        <div class="content-body">
+          <p>{{ i18n "404" }}</p>
+        </div>
+      </article>
+    </main>
+  </div>
+</div>
+{{ end }}

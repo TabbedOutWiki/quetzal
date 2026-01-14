@@ -1,0 +1,6 @@
+<script src="/pagefind/pagefind-modular-ui.js"></script>
+{{ with resources.Match "global-js/*" }}
+  {{ with resources.Concat "js/global.js" . | minify | fingerprint  }}
+    <script type="text/javascript" src="{{ .RelPermalink }}"></script>
+  {{ end }}
+{{ end }}

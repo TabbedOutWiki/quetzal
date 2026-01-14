@@ -1,0 +1,90 @@
+.content {
+  background: var(--bg-content);
+}
+
+/* Content upper section */
+.content .content-upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--border-content);
+  overflow-x: hidden;
+}
+
+.content .page-tools {
+  font-size: var(--fs);
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Content headings */
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  color: var(--tx-prominent);
+}
+
+.content .content-title,
+.content-body h1 {
+  font-size: var(--fxxl);
+}
+
+.content-body h2 {
+  font-size: var(-fxl);
+}
+
+.content-body h1,
+.content-body h2 {
+  border-bottom: 1px solid var(--border-content);
+  overflow-x: hidden;
+  margin-top: 2rem;
+}
+
+.content-body h3,
+.content-body h4,
+.content-body h5,
+.content-body h6 {
+  margin-top: 1rem;
+}
+
+.content-body h1,
+.content-body h2,
+.content-body h3,
+.content-body h4,
+.content-body h5,
+.content-body h6 {
+  scroll-margin-block-start: calc(var(--site-header-height) + var(--site-header-padding));
+  margin-bottom: 0.5rem;
+}
+
+/* Heading links */
+.content h1 a[href^="#"],
+.content h2 a[href^="#"],
+.content h3 a[href^="#"],
+.content h4 a[href^="#"],
+.content h5 a[href^="#"],
+.content h6 a[href^="#"] {
+  color: var(--tx-primary);
+  text-decoration: none;
+}
+
+.content h1 a[href^="#"]:hover,
+.content h2 a[href^="#"]:hover,
+.content h3 a[href^="#"]:hover,
+.content h4 a[href^="#"]:hover,
+.content h5 a[href^="#"]:hover,
+.content h6 a[href^="#"]:hover {
+  text-decoration: underline;
+}
+
+/* Content lists */
+.content-body ul, .content-body ol {
+  list-style-type: disc;
+  padding-left: 2.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}

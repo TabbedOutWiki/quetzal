@@ -1,0 +1,35 @@
+button {
+  border: none;
+}
+
+button, .button {
+  color: var(--tx-prominent);
+  background: var(--bg-interactive);
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button.frameless, .button.frameless {
+  background: none;
+  padding: 0.25rem;
+}
+
+button:hover, .button:hover {
+  background: var(--bg-hover);
+}
+
+.button:hover {
+  text-decoration: none;
+}
+
+/* Button icons */
+.button .icon {
+  margin: 0 -1px;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

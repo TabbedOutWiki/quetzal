@@ -1,0 +1,26 @@
+{{ define "main" }}
+<div class="page-wrapper">
+  <div class="shell">
+    <main class="main-content">
+      <article class="content" data-pagefind-body>
+        <div class="content-upper">
+          <header><h1 id="#content" class="content-title" data-pagefind-meta="title"><a href="#content">{{ .Title }}</a></h1></header>
+          <ul class="page-tools" data-pagefind-ignore>
+            <li class="page-tool"><a class="button" href="https://github.com" target="_blank" rel="external">{{ i18n "edit" }}</a></li>
+          </ul>
+        </div>
+        <div class="content-body">
+          {{ .Content }}
+          {{ range .Pages }}
+            <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+          {{ end }}
+        </div>
+      </article>
+    </main>
+  </div>
+</div>
+{{ end }}
+{{ define "scoped" }}
+  {{- $scopedCSS := resources.Get "css/term.css" | minify | fingerprint -}}
+  <link rel="stylesheet" href="{{ $scopedCSS.RelPermalink }}">
+{{ end }}

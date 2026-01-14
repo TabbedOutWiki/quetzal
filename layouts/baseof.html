@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ site.Language.LanguageDirection }}">
+<head>
+  {{ block "head" . }}
+    {{ partial "head/basehead.html" . }}
+  {{ end }}
+  {{ block "scoped" . }}{{ end }}
+</head>
+<body>
+  {{ partial "core/top-nav.html" . }}
+  {{ block "main" . }}{{ end }}
+  {{ partialCached "core/footer.html" . }}
+  {{ partialCached "resources/javascript/load-global.html" . }}
+  {{ block "libraries" . }}{{ end }}
+</body>
+</html>

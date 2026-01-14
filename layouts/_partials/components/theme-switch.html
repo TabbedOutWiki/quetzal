@@ -1,0 +1,20 @@
+<form class="theme-switcher-wrapper">
+  <label for="theme-switcher" class="sr-only">{{ i18n "sr_theme_select" }}</label>
+  <select id="theme-switcher" class="menu">
+    <button>
+      <span class="option-label">{{ i18n "theme_select" }}</span>
+    </button>
+    <option value="theme-system">
+      <span class="icon icon-system" aria-hidden="true"></span>
+      <span class="option-label">{{ i18n "theme_text_system" }}</span>
+    </option>
+    <option value="theme-light">
+      <span class="icon icon-light" aria-hidden="true"></span>
+      <span class="option-label">{{ i18n "theme_text_light" }}</span>
+    </option>
+    <option value="theme-dark">
+      <span class="icon icon-dark" aria-hidden="true"></span>
+      <span class="option-label">{{ i18n "theme_text_dark" }}</span>
+    </option>
+  </select>
+</form>

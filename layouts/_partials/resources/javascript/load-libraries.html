@@ -1,0 +1,18 @@
+{{- if .Store.Get "hasTooltip" -}}
+  {{- $tooltips := resources.Get "library/tooltips.js" | minify -}}
+  <script type="text/javascript" src="{{ $tooltips.RelPermalink }}"></script>
+{{ end }}
+{{- if .Params.renderMath -}}
+<script>
+  MathJax = {
+    tex:{
+      displayMath: [['\\[', '\\]']],  // block
+      inlineMath: [['\\(', '\\)']]    // inline
+    },
+    loader:{
+      load: ['ui/safe']
+    },
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+{{ end }}

@@ -1,0 +1,22 @@
+code {
+  font-size: var(--fs);
+  font-family: var(--font-code);
+  font-weight: 400;
+  background-color: var(--bg-item);
+  border: 1px solid var(--border-item);
+  position: relative;
+  overflow-x: auto;
+  padding-inline: 0.1rem;
+  padding-block: 0.1lh;
+  width: 100%;
+}
+
+pre {
+  font-size: inherit;
+}
+
+pre code {
+  display: block;
+  padding: 0.5rem;
+  tab-size: 4;
+}

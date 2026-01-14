@@ -1,0 +1,24 @@
+<div class="pagefind-container">
+  <form class="pagefind-form" role="search">
+    <div class="pagefind-input-container">
+      <button id="SearchButtonClose" class="pagefind-close button frameless" type="button" aria-label="{{ i18n "sr_back" }}">
+        <span class="button-wrapper">
+          <span class="icon icon-chevron-left"></span>
+          <span class="sr-only">{{ i18n "sr_back" }}</span>
+        </span>
+      </button>
+      <input
+        type="search"
+        id="PageFindInput"
+        class="pagefind-input"
+        placeholder="{{ i18n "ui_search_placeholder" }}"
+        title="{{ i18n "ui_search_title" }}"
+        autocapitalize="none"
+        autocomplete="off"
+        spellcheck="false"
+        enterkeyhint="search">
+    </div>
+    <ul id="PageFindResults" class="pagefind-results"></ul>
+  </form>
+</div>
+

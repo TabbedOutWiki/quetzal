@@ -1,0 +1,19 @@
+
+{{ if eq .Type "alert" }}
+<div class="alert alert-{{ .AlertType | safeHTML }}">
+  <p class="alert-title">
+    <span class="icon icon-{{ .AlertType | safeHTML }}" aria-hidden="true"></span>
+    {{ with .AlertTitle }}
+      <span>{{ . | safeHTML }}</span>
+    {{ else }}
+      <span>{{ or (i18n .AlertType) (title .AlertType) }}</span>
+    {{ end }}
+  </p>
+  {{ .Text | safeHTML }}
+</div>
+{{ else }}
+<blockquote>
+  <p>{{ .Text }}</p>
+  {{- with .Attributes.cite }}<cite>{{ . | safeHTML }}</cite>{{ end -}}
+</blockquote>
+{{ end }}

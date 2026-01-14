@@ -1,0 +1,54 @@
+{{ $infoboxes := .Params.infoboxes }}
+{{ if $infoboxes }}
+<div class="infobox-container tabs">
+  <!-- Tabs -->
+  <div class="tabs-container" role="tablist">
+    {{ range $i, $element := $infoboxes }}
+      {{ if eq $i 0 }}
+        <button
+          id="tab-label-{{ $i }}"
+          class="tab-control frameless active"
+          type="button"
+          role="tab"
+          data-controls="tab-panel-{{ $i }}"
+          aria-controls="tab-panel-{{ $i }}"
+          aria-selected="true">
+          <span class="focus">{{ .tab | humanize }}</span>
+        </button>
+      {{ else }}
+        <button
+          id="tab-label-{{ $i }}"
+          class="tab-control frameless"
+          type="button"
+          role="tab"
+          data-controls="tab-panel-{{ $i }}"
+          aria-controls="tab-panel-{{ $i }}"
+          aria-selected="false"
+          tabindex="-1">
+          <span class="focus">{{ .tab | humanize }}</span>
+        </button>
+      {{ end }}
+    {{ end }}
+  </div>
+  <!-- Infoboxes -->
+  {{ range $i, $element := $infoboxes }}
+    <aside id="tab-panel-{{ $i }}" data-panel="tab-panel-{{ $i }}" class="infobox {{ if gt $i 0 }}is-hidden{{ end }}" role="tabpanel" tabindex="0" aria-labelledby="tab-label-{{ $i }}">
+      <table>
+        <thead>
+          <tr>
+            <th class="infobox-title" colspan="100%">{{ .title | humanize }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{ range .data }}
+            <tr>
+              <th>{{ .label | humanize }}</th>
+              <td>{{ .value }}</td>
+            </tr>
+          {{ end }}
+        </tbody>
+      </table>
+    </aside>
+  {{ end }}
+</div>
+{{ end }}

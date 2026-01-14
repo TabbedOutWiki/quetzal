@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="page-wrapper">
+  <div class="shell category-standard">
+    <main class="main-content">
+      <div class="homepage">
+        <div class="banner">
+          <h1>{{ .Title }}</h1>
+          <p>{{ .Description }}</p>
+        </div>
+        <ul class="social-links">
+          <li>{{ partial "socials/discord-button.html" . }}</li>
+          <li>{{ partial "socials/github-button.html" . }}</li>
+        </ul>
+        <div class="homepage-body">
+          {{ partial "components/sections.html" . }}
+          <div class="homepage-content">
+            {{ .Content }}
+          </div>
+        </div>
+        {{ partial "components/recent-changes.html" . }}
+      </div>
+    </main>
+  </div>
+</div>
+{{ end }}
+{{ define "scoped" }}
+  {{- $scopedCSS := resources.Get "css/home.css" | minify | fingerprint -}}
+  <link rel="stylesheet" href="{{ $scopedCSS.RelPermalink }}">
+{{ end }}

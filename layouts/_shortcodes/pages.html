@@ -1,0 +1,12 @@
+{{- /* This may be too slow to expose as a public shortcode? Requires testing */ -}}
+{{ $pages := .Site.RegularPages }}
+{{ if .Get "category" }}
+  {{ $pages = where $pages (.Get "category") "in" "Params.categories" }}
+{{ end }}
+{{ if .Get "tag" }}
+  {{ $pages = where $pages (.Get "tag") "in" "Params.tags" }}
+{{ end }}
+{{ $paginated = .Paginate $pages.ByTitle 10 }}
+{{ range $paginated.Pages }}
+  <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+{{ end }}

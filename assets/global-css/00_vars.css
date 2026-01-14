@@ -1,0 +1,35 @@
+:root {
+  /* Site layout */
+  --site-header-height: 3rem;
+  --site-header-padding: 1rem;
+  --max-width: 1920px;
+  --gutter: 1rem;
+
+  /* Text content */
+  --font-size: 15px;
+  --font-heading: Georgia, Garamond, Palatino, serif;
+  --font-body: Verdana, Geneva, Tahoma, sans-serif;
+  --font-quote: var(--font-heading);
+  --font-code: monospace;
+  --line-height: 1.5;
+
+  /* Relative font sizes */
+  --fxs: 0.75rem;
+  --fs: 0.875rem;
+  --f: 1rem;
+  --fl: 1.25rem;
+  --fxl: 1.5rem;
+  --fxxl: 2rem;
+  --fxxxl: 2.5rem;
+
+  /* General */
+  --border-radius: 4px;
+
+  /* Icon clip-paths */
+  --clip-checkmark: polygon(100% 3.35%, 100% 39.75%, 39.88% 99.88%, 0% 60%, 20.25% 39.75%, 40% 60.49%);
+
+  /* Z Stack */
+  --z-nav: 100;
+  --z-modal: 200;
+  --z-tooltip: 300;
+}

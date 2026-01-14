@@ -1,0 +1,52 @@
+.theme-dark {
+  color-scheme: dark;
+
+  /* Text */
+  --tx-prominent: #f0f0f0;
+  --tx-primary: #eaeaea;
+  --tx-aside: #dadada;
+  --tx-subtle: #aaa;
+  --tx-placeholder: #999;
+  --tx-invert: #000;
+
+  /* Backgrounds */
+  --bg-navigation: var(--bg-primary);
+  --bg-primary: #18191d;
+  --bg-content: var(--bg-primary);
+  --bg-footer: var(--bg-navigation);
+
+  --bg-item: #212223;
+  --bg-interactive: #232425;
+  --bg-hover: #272829;
+  --bg-selected: #2a2b2c;
+
+  --bg-modal: #0a0a0a;
+  --bg-tooltip: #0f0f0f;
+
+  /* Darkest -> brightest */
+  --border-item: #343536;
+  --border-interactive: #3d3e3f;
+  --border-content: #606162;
+
+  --accent: #50b2cf;
+  --shadow: #080808;
+
+  /* Accessories */
+  --tx-highlight: var(--tx-invert);
+  --bg-highlight: var(--accent);
+
+  --alert-note: #697fcf;
+  --alert-tip: #43ad43;
+  --alert-important: #aa66c1;
+  --alert-warning: #bd843d;
+  --alert-caution: #c54848;
+
+  /* Socials */
+  --social-icon: #333;
+  --social-icon-hover: #fff;
+  --social-icon-background: #ededed;
+
+  /* Always use official brand colors here */
+  --social-discord: #5865F2;
+  --social-github: #08872B;
+}

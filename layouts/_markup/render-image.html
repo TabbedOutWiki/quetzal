@@ -1,0 +1,9 @@
+{{- $parsed := urls.Parse .Destination -}}
+{{- if not $parsed.IsAbs -}}
+{{- $src := (urls.JoinPath site.Params.tabbedout.cdnURL $parsed) -}}
+<img src="{{ $src | safeURL }}"
+  {{- with .PlainText }} alt="{{ . }}"{{ end -}}
+  {{- with .Title }} title="{{ . }}"{{ end -}}
+  loading="lazy"
+>
+{{- end -}}

@@ -1,0 +1,134 @@
+/* Common classes */
+.is-hidden {
+  display: none !important;
+}
+
+.visible {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.sr-only {
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  clip: rect(1px,1px,1px,1px) !important;
+  clip-path: inset(50%) !important;
+  overflow: hidden !important;
+}
+
+/* Tooltips */
+.tooltip {
+  position: relative;
+  border-bottom-width: 1px;
+  border-bottom-style: dotted;
+  border-bottom-color: initial;
+  cursor: pointer;
+}
+
+.tooltip:hover, .tooltip:active {
+	border-bottom-style: solid;
+}
+
+.tooltip-display {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  box-shadow: 0 0 3px var(--shadow);
+  z-index: var(--z-tooltip);
+
+  transition: 0.25s opacity;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.text-popup {
+  font-size: var(--fs);
+  color: var(--tx-primary);
+  background: var(--bg-tooltip);
+  border: 1px solid var(--border-item);
+  padding: 0.5rem;
+}
+
+/* Tabs */
+.tab-control span {
+  pointer-events: none;
+}
+
+/* Tab decoration */
+.tabs {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.tabs-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  width: 100%;
+}
+
+.tabs-container .tab-control {
+  font-size: var(--fxs);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-bottom: 1px solid var(--border-item);
+  padding: 0.25rem 0.5rem;
+}
+
+.tabs-container .tab-control:hover {
+  background: none;
+  border-color: var(--accent);
+}
+
+.tabs-container .tab-control.active {
+  border-color: var(--accent);
+}
+
+/* Infobox */
+.infobox-container {
+  display: flex;
+  background: var(--bg-item);
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  border: 1px solid var(--border-item);
+  max-width: 270px;
+}
+
+.infobox {
+  font-size: var(--fs);
+  width: 100%;
+}
+
+.infobox table {
+  width: 100%;
+}
+
+.infobox .infobox-title {
+  font-size: var(--f);
+  text-align: center;
+}
+
+.infobox tbody tr:last-child {
+  border-bottom: none;
+}
+
+@media (min-width: 1200px) {
+  .infobox-container {
+    float: right;
+    margin-left: 1rem;
+  }
+}

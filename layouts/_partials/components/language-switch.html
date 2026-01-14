@@ -1,0 +1,9 @@
+<form class="language-wrapper menu">
+  <label for="language-switcher" class="sr-only">{{ i18n "sr_language_select" }}</label>
+  <button type="button">{{ .Language.LanguageName }}</button>
+  <menu id="language-switcher" class="menu-toggle" style="display:none">
+    {{ range .Translations }}
+      <li class="menu-item"><a href="{{ .RelPermalink }}" hreflang="{{ .Language.LanguageCode }}">{{ .Language.LanguageName }}</a></li>
+    {{ end }}
+  </menu>
+</form>

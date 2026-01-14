@@ -1,0 +1,14 @@
+<nav aria-label="Breadcrumb">
+  <ol class="breadcrumb-list" aria-label="Breadcrumbs">
+      {{- range .Ancestors.Reverse }}
+        <li class="breadcrumb-item">
+          <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+          <!--<meta itemprop="position" content="">-->
+        </li>
+      {{- end }}
+      <li class="breadcrumb-item">
+        <a class="current" aria-current="page" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        <!--<meta itemprop="position" content="">-->
+      </li>
+  </ol>
+</nav>

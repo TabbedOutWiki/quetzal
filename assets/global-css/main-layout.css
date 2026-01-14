@@ -1,0 +1,117 @@
+main {
+  display: flow-root;
+  min-height: 80vh;
+}
+
+.page-wrapper {
+  min-height: calc(100vh - var(--site-header-height));
+}
+
+.main-content {
+  padding-top: var(--site-header-padding);
+}
+
+/* ====================================================================================================
+ * Mobile
+ * ==================================================================================================== */
+/* Content organization */
+.shell {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.page-wrapper .main-content,
+.page-wrapper .sidebar,
+.page-wrapper .utils {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.sidebar-container,
+.sidebar-container .sidebar,
+.sidebar-container .utils {
+  display: none;
+}
+
+.sidebar a {
+  color: var(--tx-aside);
+}
+
+.sidebar a.current {
+  color: var(--tx-highlight);
+  background: var(--bg-highlight);
+}
+
+/* ====================================================================================================
+ * Tablet
+ * ==================================================================================================== */
+@media (min-width: 769px) {
+  .category-article {
+    display: grid;
+    grid-template-areas: "utils content";
+    grid-template-columns: minmax(0, 2fr) minmax(0, 7fr);
+    grid-column-gap: 2.5rem;
+  }
+
+  .category-article .sidebar {
+    grid-area: sidebar;
+  }
+
+  .category-article .main-content {
+    grid-area: content;
+  }
+
+  .category-article .utils {
+    grid-area: utils;
+  }
+
+  /* Sticky sidebar */
+  .sidebar-container .utils,
+  .sidebar-container .sidebar {
+    position: sticky;
+    max-height: calc(100vh - var(--site-header-height));
+    top: var(--site-header-height);
+    overflow-y: auto;
+    padding-top: var(--site-header-padding);
+  }
+
+  /* Utils sidebar */
+  .sidebar-container .utils {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  /* Sidebar */
+  .sidebar-container {
+    display: contents;
+  }
+
+  .sidebar-container .sidebar {
+    display: flex;
+    font-size: var(--fs);
+  }
+
+  .sidebar a {
+    overflow-wrap: break-word;
+  }
+
+  .sidebar a.current {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+/* ====================================================================================================
+ * Desktop
+ * ==================================================================================================== */
+@media (min-width: 1200px) {
+  .category-article {
+    grid-template-areas: "sidebar content utils";
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 7fr) minmax(0, 1.5fr);
+  }
+
+  .page-wrapper .main-content {
+    display: flow-root;
+  }
+}

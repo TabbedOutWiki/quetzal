@@ -1,0 +1,70 @@
+select,
+::picker(select) {
+  appearance: base-select;
+}
+
+select {
+  color: var(--tx-prominent);
+  background: var(--bg-interactive);
+  border-radius: 0;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: none;
+}
+
+option {
+  color: var(--tx-primary);
+  background: var(--bg-interactive);
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+option:hover,
+option:focus {
+  background: var(--bg-hover);
+}
+
+option:checked {
+  background: var(--bg-selected);
+}
+
+option:checked .option-label {
+  font-weight: bold;
+}
+
+option::checkmark {
+  order: 1;
+  margin-left: auto;
+  content: '\2022';
+}
+
+::picker(select) {
+  border-color: var(--border-item);
+}
+
+select:hover,
+select:focus {
+  background: var(--bg-hover);
+}
+
+select:open::picker-icon {
+  rotate: 180deg;
+}
+
+/* Manual menus */
+.menu {
+  position: relative;
+}
+
+.menu .menu-toggle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  margin-top: 1px;
+}
+
+.menu .menu-item {
+  background: var(--bg-interactive);
+  padding: 0.5rem 1rem;
+}

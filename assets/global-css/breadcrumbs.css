@@ -1,0 +1,33 @@
+.breadcrumb-item {
+  color: var(--tx-subtle);
+}
+
+.breadcrumb-item a,
+.breadcrumb-item a.current {
+  color: inherit;
+}
+
+.breadcrumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: var(--fs);
+  padding: 0.25rem 0;
+  overflow-x: hidden;
+  gap: 0.25rem;
+}
+
+.breadcrumb-item a {
+  max-width: 10rem;
+  overflow-x: hidden;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+}
+
+.breadcrumb-item:not(:last-child) {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.breadcrumb-item:not(:last-child)::after {
+  content: '>';
+}

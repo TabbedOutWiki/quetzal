@@ -1,0 +1,53 @@
+:root,
+.theme-light {
+  color-scheme: light;
+
+  /* Text */
+  --tx-prominent: #0a0a0a;
+  --tx-primary: #0f0f0f;
+  --tx-aside: #222;
+  --tx-subtle: #555;
+  --tx-placeholder: #999;
+  --tx-invert: #fff;
+
+  /* Backgrounds */
+  --bg-navigation: var(--bg-primary);
+  --bg-primary: #fcfbfa;
+  --bg-content: var(--bg-primary);
+  --bg-footer: var(--bg-navigation);
+
+  --bg-item: #f0f0f2;
+  --bg-interactive: #ececee;
+  --bg-hover: #e5e5e7;
+  --bg-selected: #e2e2e4;
+
+  --bg-modal: #d0d0d2;
+  --bg-tooltip: #cdcdcf;
+
+  /* Darkest -> brightest */
+  --border-item: #ccccce;
+  --border-interactive: #c0c0c2;
+  --border-content: #dddddf;
+
+  --accent: #237c7c;
+  --shadow: #bfbfbf;
+
+  /* Accessories */
+  --tx-highlight: var(--tx-invert);
+  --bg-highlight: var(--accent);
+
+  --alert-note: #697fcf;
+  --alert-tip: #43ad43;
+  --alert-important: #aa66c1;
+  --alert-warning: #bd843d;
+  --alert-caution: #c54848;
+
+  /* Socials */
+  --social-icon: #333;
+  --social-icon-hover: #fff;
+  --social-icon-background: #ededed;
+
+  /* Always use official brand colors here */
+  --social-discord: #5865F2;
+  --social-github: #08872B;
+}

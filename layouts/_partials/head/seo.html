@@ -1,0 +1,45 @@
+<title>{{ .Title }} - {{ .Site.Title }}</title>
+<link rel="canonical" href="{{ .Permalink }}">
+<meta name="description" content="{{ .Description }}">
+{{- if hugo.IsProduction -}}
+  <meta name="google" content="sitelinkssearchbox">
+  <meta name="robots" content="index, follow, max-image-preview:standard">
+{{- else -}}
+  <meta name="robots" content="noindex">
+{{- end -}}
+<meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
+<meta property="og:description" content="{{ .Description }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ .Site.BaseURL }}{{ .RelPermalink }}">
+<meta property="og:image" content="">
+<meta property="og:image:secure_url" content="">
+<meta name="twitter:card" content="summary">
+{{ if not .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement":
+  [
+  {{- $i := 1 }}
+  {{- range .Ancestors.Reverse }}
+    {
+      "@type": "ListItem",
+      "position": {{ $i }},
+      "name": "{{ .Title | safeJS }}",
+      "url": {{ .Permalink }},
+      "item": {{ .Permalink }}
+    },
+    {{- $i = add $i 1 -}}
+  {{ end }}
+    {
+      "@type": "ListItem",
+      "position": {{ $i }},
+      "name": "{{ .Title | safeJS }}",
+      "url": {{ .Permalink }},
+      "item": {{ .Permalink }}
+    }
+  ]
+}
+</script>
+{{ end }}

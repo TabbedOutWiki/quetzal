@@ -1,0 +1,11 @@
+<div class="section-links">
+  {{ range .Site.Sections }}
+    <figure class="section-panel">
+        <a href="{{ .RelPermalink }}">
+          <img src="" alt="" width="150" height="100">
+          <figcaption>{{ .LinkTitle }}</figcaption>
+        </a>
+      </a>
+    </figure>
+  {{ end }}
+</div>

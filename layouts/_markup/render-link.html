@@ -1,0 +1,15 @@
+{{- $parsed := urls.Parse .Destination -}}
+<a
+  {{ if $parsed.IsAbs }}
+    {{- if findRE (.Page.Param "whitelist.linkRegex") $parsed.Hostname -}}
+      href="{{ $parsed | safeURL }}"
+      rel="nofollow"
+      target="_blank"
+    {{- else -}}
+      {{- $requestURL := (urls.JoinPath (site.Params.tabbedout.docURL) site.Language.Lang "/request-whitelist") }}
+      {{ errorf "Link is not whitelisted: %s\nRequest a whitelist here: %s" $parsed $requestURL }}
+    {{- end -}}
+  {{ else }}
+    href="{{ $parsed | relLangURL }}"
+  {{ end }}
+>{{ .Text | safeHTML }}</a>

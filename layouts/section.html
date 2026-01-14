@@ -1,0 +1,45 @@
+{{ define "main" }}
+<div class="page-wrapper">
+  <div class="shell category-article">
+    <main class="main-content">
+      {{ partial "components/breadcrumbs.html" . }}
+      <article class="content" data-pagefind-body>
+        <div class="content-upper">
+          <header><h1 id="#content" class="content-title" data-pagefind-meta="title"><a href="#content">{{ .Title }}</a></h1></header>
+          <ul class="page-tools" data-pagefind-ignore>
+            {{- $href := (urls.JoinPath .Site.Params.repository.editURL .Site.Language .Page.File.Path) }}
+            <li class="page-tool"><a class="button" href="{{ $href }}" target="_blank" rel="external">{{ i18n "edit" }}</a></li>
+          </ul>
+        </div>
+        <div class="content-body">
+          {{ .Content }}
+          <div class="section-grid">
+            {{ range .RegularPages }}
+              {{ if .IsSection }}
+              <a href="{{ .RelPermalink }}" class="grid-item">
+                <img src="" alt="" width="128" height="128">
+                <div><strong>{{ .LinkTitle }}</strong></div>
+              </a>
+              {{ end }}
+            {{ end }}
+          </div>
+          <div class="page-grid">
+            {{ range .RegularPages }}
+              {{ if .IsPage }}
+              <a href="{{ .RelPermalink }}" class="grid-bar">
+                <img src="" alt="" width="64" height="64">
+                <div>{{ .LinkTitle }}</div>
+              </a>
+              {{ end }}
+            {{ end }}
+          </div>
+        </div>
+      </article>
+    </main>
+  </div>
+</div>
+{{ end }}
+{{ define "scoped" }}
+  {{- $scopedCSS := resources.Get "css/section.css" | minify | fingerprint -}}
+  <link rel="stylesheet" href="{{ $scopedCSS.RelPermalink }}">
+{{ end }}

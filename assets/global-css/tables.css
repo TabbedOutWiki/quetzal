@@ -1,0 +1,15 @@
+table {
+  border-collapse: collapse;
+  overflow-x: auto;
+}
+
+table tr {
+  border: 1px solid var(--border-item);
+}
+
+table th,
+table td {
+  text-align: left;
+  padding: 0.25rem 1rem 0.25rem 0.5rem;
+  min-width: 5rem;
+}

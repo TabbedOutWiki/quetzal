@@ -1,0 +1,10 @@
+<!-- Global CSS -->
+{{ with resources.Match "global-css/*" }}
+  {{ with resources.Concat "css/style.css" . | minify | fingerprint  }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{ end }}
+{{ end }}
+<!-- Critical JS -->
+{{- $criticalJS := resources.Get "critical.js" | minify -}}
+{{- with $criticalJS }}<script>{{ .Content | safeJS }}</script>{{- end }}
+<!-- Preload / load fonts here -->

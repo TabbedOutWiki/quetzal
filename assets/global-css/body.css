@@ -1,0 +1,26 @@
+body {
+  font-size: var(--font-size);
+  font-family: var(--font-body);
+  color: var(--tx-primary);
+  background: var(--bg-primary);
+  accent-color: var(--accent);
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  line-height: var(--line-height);
+  min-height: 100vh;
+  margin: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+ul, ol, menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,36 @@
+{{- $parsed := urls.Parse (.Get "src") -}}
+{{- if not $parsed.IsAbs -}}
+<figure class="content-figure">
+  {{- if .Get "link" -}}
+    {{- $parsedLink := urls.Parse (.Get "link") -}}
+    <a
+      {{ if $parsedLink.IsAbs }}
+        {{- if findRE (.Page.Param "whitelist.linkRegex") $parsedLink.Hostname -}}
+          href="{{ $parsedLink | safeURL }}"
+          rel="nofollow"
+          target="_blank"
+        {{- else -}}
+          {{- $requestURL := (urls.JoinPath ($.Site.Params.tabbedout.docURL) site.Language.Lang "/request-whitelist") }}
+          {{ errorf "Link is not whitelisted: %s\nRequest a whitelist here: %s" $parsedLink $requestURL }}
+        {{- end -}}
+      {{ else }}
+        href="{{ $parsedLink | relLangURL }}"
+      {{ end }}
+    >
+  {{- end -}}
+
+  {{- $src := (urls.JoinPath $.Site.Params.tabbedout.cdnURL $parsed) -}}
+  <img src="{{ $src | safeURL }}"
+    {{- if or (.Get "alt") (.Get "caption") }}
+    alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify | plainify }}{{ end }}"
+    {{- end -}}
+    {{- with .Get "width" }} width="{{ . }}"{{ end -}}
+    {{- with .Get "height" }} height="{{ . }}"{{ end -}}
+    loading="lazy"
+  ><!-- Close -->
+  {{- if .Get "link" }}</a>{{ end -}}
+  {{- with .Get "caption" -}}
+    <figcaption><p>{{ . | markdownify }}</p></figcaption>
+  {{- end -}}
+</figure>
+{{- end -}}
