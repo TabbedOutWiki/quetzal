@@ -13,8 +13,9 @@
 }
 
 .content .page-tools {
-  font-size: var(--fs);
   display: flex;
+  align-items: center;
+  font-size: var(--fs);
   gap: 0.5rem;
 }
 

@@ -1,22 +1,24 @@
-<table>
-  <caption><h2>Recent Changes</h2></caption>
-  <thead>
-    <tr>
-      <th>Page</th>
-      <th>Summary</th>
-      <th>Date</th>
-      <th>Diffs</th>
-    </tr>
-  </thead>
-  <tbody>
-    {{ $byLastMod := .Site.RegularPages.ByLastmod }}
-    {{ range ($byLastMod | last 8).Reverse }}
-    <tr class="change">
-      <td><a href="{{ .Permalink }}" target="_blank">{{ .Title }}</a></td>
-      <td>{{ with .GitInfo }}{{ .Subject }}{{ else }}[blank]{{ end }}</td>
-      <td>{{ .Lastmod.Format "Jan 02" }}</td>
-      <td><a href="{{ .Site.Params.repository.mainURL }}/commit/{{.GitInfo.Hash}}" target="_blank">commit</a></td>
-    </tr>
-    {{ end }}
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table>
+    <caption><h2>Recent Changes</h2></caption>
+    <thead>
+      <tr>
+        <th>Page</th>
+        <th>Summary</th>
+        <th>Date</th>
+        <th>Diffs</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ $byLastMod := .Site.RegularPages.ByLastmod }}
+      {{ range ($byLastMod | last 8).Reverse }}
+      <tr class="change">
+        <td><a href="{{ .Permalink }}" target="_blank">{{ .Title }}</a></td>
+        <td>{{ with .GitInfo }}{{ .Subject }}{{ else }}[blank]{{ end }}</td>
+        <td>{{ .Lastmod.Format "Jan 02" }}</td>
+        <td><a href="{{ .Site.Params.repository.mainURL }}/commit/{{.GitInfo.Hash}}" target="_blank">commit</a></td>
+      </tr>
+      {{ end }}
+    </tbody>
+  </table>
+</div>

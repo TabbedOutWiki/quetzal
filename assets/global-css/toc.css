@@ -1,7 +1,6 @@
 #TableOfContents > ul {
   background-color: var(--bg-item);
-  border-color: var(--border-item);
-  border-style: solid;
+  border: 1px solid var(--border-item);
   border-radius: var(--border-radius);
 }
 
@@ -9,14 +8,9 @@
   color: var(--tx-aside);
 }
 
-#TableOfContents ul ul {
-  border-color: var(--border-item);
-}
-
 @media (min-width: 769px) {
   #TableOfContents > ul {
     font-size: var(--fs);
-    border-width: 1px;
     padding: 0.5rem 1rem;
   }
 
@@ -25,9 +19,8 @@
   }
 
   #TableOfContents ul ul {
-    border-left-width: 1px;
-    border-left-style: dashed;
     margin-left: 0.75rem;
     padding-left: 0.25rem;
+    border-left: 1px dashed var(--border-item);
   }
 }

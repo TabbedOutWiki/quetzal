@@ -2,7 +2,8 @@ button {
   border: none;
 }
 
-button, .button {
+button, a.button {
+  display: inline-block;
   color: var(--tx-prominent);
   background: var(--bg-interactive);
   padding: 0.5rem 1.5rem;
@@ -10,16 +11,16 @@ button, .button {
   cursor: pointer;
 }
 
-button.frameless, .button.frameless {
+button.frameless, a.button.frameless {
   background: none;
   padding: 0.25rem;
 }
 
-button:hover, .button:hover {
+button:hover, a.button:hover {
   background: var(--bg-hover);
 }
 
-.button:hover {
+a.button:hover {
   text-decoration: none;
 }
 

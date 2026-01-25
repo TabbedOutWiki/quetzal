@@ -9,6 +9,7 @@
           <ul class="page-tools" data-pagefind-ignore>
             {{- $href := (urls.JoinPath .Site.Params.repository.editURL .Site.Language .Page.File.Path) }}
             <li class="page-tool"><a class="button" href="{{ $href }}" target="_blank" rel="external">{{ i18n "edit" }}</a></li>
+            <li class="page-tool"><button id="ShareArticleButton" type="button">Share</button></li>
           </ul>
         </div>
         <div class="content-body">
@@ -42,4 +43,7 @@
 {{ define "scoped" }}
   {{- $scopedCSS := resources.Get "css/section.css" | minify | fingerprint -}}
   <link rel="stylesheet" href="{{ $scopedCSS.RelPermalink }}">
+{{ end }}
+{{ define "libraries" }}
+  {{ partialCached "resources/javascript/load-libraries.html" . }}
 {{ end }}

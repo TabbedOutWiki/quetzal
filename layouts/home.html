@@ -6,6 +6,8 @@
         <div class="banner">
           <h1>{{ .Title }}</h1>
           <p>{{ .Description }}</p>
+          <div>[random contributor avatars placeholder]</div>
+          <p>Total articles: {{ len .Site.RegularPages }}</p>
         </div>
         <ul class="social-links">
           <li>{{ partial "socials/discord-button.html" . }}</li>

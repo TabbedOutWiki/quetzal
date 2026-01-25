@@ -1,0 +1,7 @@
+<div class="codeblock">
+  {{- with .Attributes.file }}
+    <div class="codeblock-file">{{ . | $.Page.RenderString }}</div>
+  {{- end }}
+  {{ $result := transform.HighlightCodeBlock . }}
+  {{ $result.Wrapped }}
+</div>

@@ -20,3 +20,12 @@ pre code {
   padding: 0.5rem;
   tab-size: 4;
 }
+
+.codeblock {
+
+}
+
+.codeblock-file {
+  font-size: var(--fs);
+  font-family: var(--font-code);
+}

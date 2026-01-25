@@ -16,3 +16,5 @@
 </script>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
 {{ end }}
+{{- $shareURL := resources.Get "library/share.js" | minify -}}
+<script defer type="text/javascript" src="{{ $shareURL.RelPermalink }}"></script>

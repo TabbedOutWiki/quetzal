@@ -5,6 +5,8 @@ main {
 
 .page-wrapper {
   min-height: calc(100vh - var(--site-header-height));
+  margin-left: var(--gutter);
+  margin-right: var(--gutter);
 }
 
 .main-content {

@@ -47,11 +47,18 @@ Strikethrough: ~~struck through text, ow~~
 
 ## Blockquotes
 
+## Tables
+
+| Header 1 | Header 2 | Header 3 |
+|----------|----------|----------|
+| Value 1  | Value 1  | Value 1  |
+| Value 2  | Value 2  | Value 2  |
+| Value 3  | Value 3  | Value 3  |
+{caption="Table caption here"}
+
 ## Code
 
-File name: `file.js`
-
-```javascript
+```javascript {file="file.js"}
 const logExample = () => {
   const printText = 'String text here';
   console.log(printText);
