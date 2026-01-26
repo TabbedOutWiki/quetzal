@@ -34,3 +34,8 @@ a.button:hover {
   justify-content: center;
   align-items: center;
 }
+
+/* Dropdown */
+select button {
+  padding: 0;
+}

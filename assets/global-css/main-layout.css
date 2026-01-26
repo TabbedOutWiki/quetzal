@@ -56,10 +56,6 @@ main {
     grid-column-gap: 2.5rem;
   }
 
-  .category-article .sidebar {
-    grid-area: sidebar;
-  }
-
   .category-article .main-content {
     grid-area: content;
   }
@@ -89,11 +85,6 @@ main {
     display: contents;
   }
 
-  .sidebar-container .sidebar {
-    display: flex;
-    font-size: var(--fs);
-  }
-
   .sidebar a {
     overflow-wrap: break-word;
   }
@@ -108,12 +99,21 @@ main {
  * Desktop
  * ==================================================================================================== */
 @media (min-width: 1200px) {
+  .page-wrapper .main-content {
+    display: flow-root;
+  }
+
   .category-article {
     grid-template-areas: "sidebar content utils";
     grid-template-columns: minmax(0, 1.5fr) minmax(0, 7fr) minmax(0, 1.5fr);
   }
 
-  .page-wrapper .main-content {
-    display: flow-root;
+  .category-article .sidebar {
+    grid-area: sidebar;
+  }
+
+  .sidebar-container .sidebar {
+    display: flex;
+    font-size: var(--fs);
   }
 }

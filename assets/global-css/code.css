@@ -1,3 +1,4 @@
+/* Inline */
 code {
   font-size: var(--fs);
   font-family: var(--font-code);
@@ -11,21 +12,21 @@ code {
   width: 100%;
 }
 
+/* Block */
 pre {
   font-size: inherit;
+  margin: 0;
 }
 
 pre code {
   display: block;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   tab-size: 4;
-}
-
-.codeblock {
-
 }
 
 .codeblock-file {
   font-size: var(--fs);
   font-family: var(--font-code);
+  background-color: var(--bg-accent);
+  padding: 0.5rem 1rem;
 }

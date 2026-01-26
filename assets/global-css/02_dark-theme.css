@@ -28,7 +28,8 @@
   --border-interactive: #3d3e3f;
   --border-content: #606162;
 
-  --accent: #50b2cf;
+  --accent: rgb(130, 116, 221);
+  --bg-accent: darkslateblue;
   --shadow: #080808;
 
   /* Accessories */
