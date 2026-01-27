@@ -1,0 +1,17 @@
+official:
+  site: ""
+  discord: ""
+  youtube: ""
+  twitch: ""
+  reddit: ""
+wiki:
+  discord: ""
+tabbedout:
+  docURL: "https://tabbedout.wiki/"
+  cdnURL: "https://cdn.tabbedout.wiki/"
+repository:
+  mainURL: "https://github.com/TabbedOutWiki/quetzal"
+  editURL: "https://github.com/TabbedOutWiki/quetzal/edit/main/exampleSite/content/"
+  viewURL: "https://github.com/TabbedOutWiki/quetzal/blob/main/exampleSite/content/"
+whitelist:
+  linkRegex: '^([a-z0-9-]+\.)?(tabbedout\.wiki|wikipedia\.org|toolkits\.gg|gohugo\.io)$'
