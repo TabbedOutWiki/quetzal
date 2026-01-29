@@ -45,49 +45,49 @@
 
 /* Icon assets */
 .icon.icon-menu {
-  mask-image: url('/icon/menu.svg');
+  mask-image: url('../icon/menu.svg');
 }
 
 .icon.icon-system {
-  mask-image: url('/icon/theme-system.svg');
+  mask-image: url('../icon/theme-system.svg');
 }
 
 .icon.icon-light {
-  mask-image: url('/icon/theme-light.svg');
+  mask-image: url('../icon/theme-light.svg');
 }
 
 .icon.icon-dark {
-  mask-image: url('/icon/theme-dark.svg');
+  mask-image: url('../icon/theme-dark.svg');
 }
 
 .icon.icon-note {
-  mask-image: url('/icon/note.svg');
+  mask-image: url('../icon/note.svg');
 }
 
 .icon.icon-tip {
-  mask-image: url('/icon/tip.svg');
+  mask-image: url('../icon/tip.svg');
 }
 
 .icon.icon-important {
-  mask-image: url('/icon/important.svg');
+  mask-image: url('../icon/important.svg');
 }
 
 .icon.icon-warning {
-  mask-image: url('/icon/warning.svg');
+  mask-image: url('../icon/warning.svg');
 }
 
 .icon.icon-caution {
-  mask-image: url('/icon/caution.svg');
+  mask-image: url('../icon/caution.svg');
 }
 
 .icon.icon-search {
-  mask-image: url('/icon/search.svg');
+  mask-image: url('../icon/search.svg');
 }
 
 .icon.icon-chevron-left {
-  mask-image: url('/icon/chevron-left.svg');
+  mask-image: url('../icon/chevron-left.svg');
 }
 
 .icon.icon-close {
-  mask-image: url('/icon/close.svg');
+  mask-image: url('../icon/close.svg');
 }

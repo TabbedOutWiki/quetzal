@@ -1,0 +1,8 @@
+/* Match meter tag with progress tag */
+meter {
+  inline-size: 10em;
+}
+
+meter::-webkit-meter-bar {
+  background: #fafafa;
+}

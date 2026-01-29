@@ -2,9 +2,7 @@ kbd {
   color: #333;
   background: #ddd;
   font-size: var(--fs);
-  font-weight: bold;
   box-shadow: 0 1px 1px #ccc inset, 0 3px 0 0 #999;
-  border: 1px solid #555;
   border-radius: var(--border-radius);
   padding: 0.25rem 0.5rem;
   white-space: nowrap;

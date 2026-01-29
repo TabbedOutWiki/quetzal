@@ -17,7 +17,7 @@
 
   color: #fafafa;
   background-color: var(--bg-item);
-  background-image: url('/pattern/hexagons.svg');
+  background-image: url('../pattern/hexagons.svg');
   text-shadow: 2px 2px 2px #000;
 
   width: 100%;

@@ -1,1 +1,6 @@
-{{ if len .Params | eq 2 }}{{ highlight (trim .InnerDeindent "\n\r") (.Get 0) (.Get 1) }}{{ else }}{{ highlight (trim .InnerDeindent "\n\r") (.Get 0) "" }}{{ end }}
+<div class="codeblock">
+  {{- with .Get 2 }}
+    <div class="codeblock-file">{{ . | $.Page.RenderString }}</div>
+  {{- end }}
+  {{ if len .Params | eq 2 }}{{ highlight (trim .InnerDeindent "\n\r") (.Get 0) (.Get 1) }}{{ else }}{{ highlight (trim .InnerDeindent "\n\r") (.Get 0) "" }}{{ end }}
+</div>

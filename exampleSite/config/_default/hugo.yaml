@@ -97,6 +97,8 @@ markup:
     startLevel: 2
     endLevel: 3
     ordered: false
+  highlight:
+    style: github-dark
 
 module:
   workspace: hugo.work

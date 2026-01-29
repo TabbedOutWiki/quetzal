@@ -1,1 +1,7 @@
-<meter value="{{ .Get 0 | safeHTML }}" min="" max="" low="" high="" optimum="">{{ .Get 0 | safeHTML }}</meter>
+<meter
+  value="{{ .Get "value" | safeHTML }}"
+  min="{{ with .Get "min" }}{{ . }}{{ end }}"
+  max="{{ with .Get "max" }}{{ . }}{{ end }}"
+  low="{{ with .Get "low" }}{{ . }}{{ end }}"
+  high="{{ with .Get "high" }}{{ . }}{{ end }}"
+  optimum="{{ with .Get "optimum" }}{{ . }}{{ end }}">{{ with .Get "label" }}{{ . }}{{ end }}</meter>

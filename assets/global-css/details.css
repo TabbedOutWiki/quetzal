@@ -40,7 +40,7 @@ details[open] > summary {
   background: var(--bg-selected);
 }
 
-details[open]::details-content {
+details::details-content {
   border-left: 1px dashed var(--border-item);
   margin-left: 0.75rem;
   padding-left: 0.75rem;

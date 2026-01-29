@@ -13,10 +13,10 @@
       {{ $byLastMod := .Site.RegularPages.ByLastmod }}
       {{ range ($byLastMod | last 8).Reverse }}
       <tr class="change">
-        <td><a href="{{ .Permalink }}" target="_blank">{{ .Title }}</a></td>
-        <td>{{ with .GitInfo }}{{ .Subject }}{{ else }}[blank]{{ end }}</td>
+        <td><a href="{{ .Permalink }}">{{ .Title }}</a></td>
+        <td>{{ with .GitInfo }}{{ .Subject }}{{ end }}</td>
         <td>{{ .Lastmod.Format "Jan 02" }}</td>
-        <td><a href="{{ .Site.Params.repository.mainURL }}/commit/{{.GitInfo.Hash}}" target="_blank">commit</a></td>
+        <td>{{ with .GitInfo }}<a href="{{ $.Site.Params.repository.mainURL }}/commit/{{ .Hash }}" target="_blank">commit</a>{{ end }}</td>
       </tr>
       {{ end }}
     </tbody>

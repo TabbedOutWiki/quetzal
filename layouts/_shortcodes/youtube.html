@@ -1,5 +1,5 @@
-{{- $videoID := .Get "id" | safeHTML | safeURL -}}
-{{- $start := .Get "start" -}}
+{{- $videoID := .Get 0 | safeHTML | safeURL -}}
+{{- $start := .Get 1 -}}
 {{- $validID := findRE "^[\\w-]{11}$" $videoID -}}
 {{- if gt (len $validID) 0 -}}
 <a
