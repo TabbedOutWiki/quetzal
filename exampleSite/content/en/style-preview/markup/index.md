@@ -40,8 +40,8 @@ Strikethrough: ~~struck through text, ow~~
 
 ### Tasklist
 
-- [ ] Checked task
-- [ ] Checked task
+- [X] Checked task
+- [X] Checked task
 - [ ] Unchecked task
 - [ ] Unchecked task
 
