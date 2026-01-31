@@ -21,6 +21,14 @@
   overflow: hidden !important;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
 /* Tooltips */
 .tooltip {
   position: relative;
