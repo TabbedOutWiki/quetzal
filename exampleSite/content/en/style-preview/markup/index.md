@@ -4,7 +4,7 @@ title: "Markup"
 description: "Preview markup tools/overrides"
 ---
 
-Use this page to view various markup tools and overrides. Essentially, this contains everything but shortcodes.
+Use this page to view various markup tools and overrides. Essentially, this contains everything but [shortcodes](/style-preview/shortcode).
 
 ## Text
 
