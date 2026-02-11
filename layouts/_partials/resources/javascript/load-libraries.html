@@ -1,6 +1,10 @@
-{{- if .Store.Get "hasTooltip" -}}
+{{- if .HasShortcode "tooltip" -}}
   {{- $tooltips := resources.Get "library/tooltips.js" | minify -}}
   <script type="text/javascript" src="{{ $tooltips.RelPermalink }}"></script>
+{{ end }}
+{{- if .HasShortcode "tabs" -}}
+  {{- $tabs := resources.Get "library/tabs.js" | minify -}}
+  <script type="text/javascript" src="{{ $tabs.RelPermalink }}"></script>
 {{ end }}
 {{- if .Params.renderMath -}}
 <script>

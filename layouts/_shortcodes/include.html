@@ -1,0 +1,5 @@
+{{ with .Get 0 }}
+  {{ with $.Page.GetPage . }}
+    {{- .RenderShortcodes }}
+  {{ end }}
+{{ end }}

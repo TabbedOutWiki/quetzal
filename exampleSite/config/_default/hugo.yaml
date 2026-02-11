@@ -21,6 +21,18 @@ taxonomies:
   category: "categories"
   tag: "tags"
 
+# ============================ BUILD SEGMENTS ============================
+# Usage:   hugo --renderSegments [segment-name]
+# Example: hugo --renderSegments feeds
+segments:
+  feeds:
+    includes:
+    - kind: '{home}'
+  en:
+    includes:
+    - lang: en
+    - kind: '{section,page}'
+
 # ========================== DO NOT TOUCH BELOW ==========================
 enableGitInfo: true
 

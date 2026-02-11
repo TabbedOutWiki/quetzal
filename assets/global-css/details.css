@@ -37,7 +37,8 @@ details > summary:hover {
 
 details[open] > summary {
   color: var(--tx-prominent);
-  background: var(--bg-selected);
+  background: var(--bg-accent);
+  border-color: var(--bg-accent);
 }
 
 details::details-content {

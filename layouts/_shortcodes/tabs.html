@@ -1,0 +1,28 @@
+{{ $labels := .Params }}
+{{ $defaultActive := index $labels 0 }}
+{{ $.Page.Store.Add "default-active-tabs" (slice $defaultActive) }}
+<div class="tab-group" role="tablist">
+  {{ range $i, $tab := $labels }}
+    {{ $safe_tab := $tab | urlize | safeHTMLAttr }}
+    {{ if eq $i 0 }}
+    <button
+      id="tab-label-{{ $safe_tab }}"
+      class="tab-button frameless active"
+      type="button"
+      role="tab"
+      data-controls="tab-panel-{{ $safe_tab }}"
+      aria-controls="tab-panel-{{ $safe_tab }}"
+      aria-selected="true">{{ $tab }}</button>
+    {{ else }}
+    <button
+      id="tab-label-{{ $safe_tab }}"
+      class="tab-button frameless"
+      type="button"
+      role="tab"
+      data-controls="tab-panel-{{ $safe_tab }}"
+      aria-controls="tab-panel-{{ $safe_tab }}"
+      aria-selected="false"
+      tabindex="-1">{{ $tab }}</button>
+    {{ end }}
+  {{ end }}
+</div>

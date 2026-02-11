@@ -1,0 +1,1 @@
+<span style="{{ .Get 0 | safeCSS}}">{{ .Inner | strings.TrimSpace | .Page.RenderString }}</span>

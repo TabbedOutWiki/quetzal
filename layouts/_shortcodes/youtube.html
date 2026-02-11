@@ -1,7 +1,7 @@
-{{- $videoID := .Get 0 | safeHTML | safeURL -}}
-{{- $start := .Get 1 -}}
-{{- $validID := findRE "^[\\w-]{11}$" $videoID -}}
-{{- if gt (len $validID) 0 -}}
+{{- $videoID := or (.Get 0) (.Get "id") }}
+{{- $start := .Get "start" }}
+{{- $validID := findRE `^[\w-]{11}$` $videoID }}
+{{- if gt (len $validID) 0 }}
 <a
   href="https://youtu.be/{{ $videoID }}{{ with $start }}&t={{ . }}{{ end }}"
   rel="noopener noreferrer"
@@ -22,4 +22,4 @@
     </svg>
   </div>
 </a>
-{{- end -}}
+{{- end }}

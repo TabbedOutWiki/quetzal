@@ -6,12 +6,6 @@ description: "Preview frontmatter visuals"
 
 ## Block
 
-### Article
-
-{{< article "Article title" >}}
-Article body text
-{{< /article >}}
-
 ### Code
 
 {{< highlight js "hl_lines=2" "file.js">}}
@@ -28,12 +22,29 @@ Details body text
 
 ## Utility
 
+### HTML Tags
+
 | Tag      | Example                                                  |
 |----------|----------------------------------------------------------|
-| tooltip  | {{< tooltip "Hover this text!" "Ur mom lmao" >}}         |
 | kbd      | {{< kbd "Alt" >}} + {{< kbd "Tab" >}}                    |
 | progress | {{< progress "50" "100" >}}                              |
 | meter    | {{< meter value="30" min="0" max="100" label="Meter" >}} |
+
+### Tabs
+
+{{< tabs "Tab 1" "Tab 2" >}}
+
+{{< tab "Tab 1" >}}
+This is the tab content for "Tab 1". The first tab is active by default, and name of each tab must match the name of the corresponding panels.
+{{< /tab >}}
+
+{{< tab "Tab 2" >}}
+This is the tab content for "Tab 2". This tab is hidden by default.
+{{< /tab >}}
+
+### Tooltips
+
+{{< tooltip "Hover this text!" "Ur mom lmao" >}}
 
 ## Embeds
 

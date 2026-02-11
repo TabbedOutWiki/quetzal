@@ -69,39 +69,33 @@
 }
 
 /* Tabs */
-.tab-control span {
-  pointer-events: none;
-}
-
-/* Tab decoration */
-.tabs {
+.tab-group {
   display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
-
-.tabs-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 1fr;
+  align-items: center;
   width: 100%;
+
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  gap: 0.5rem;
 }
 
-.tabs-container .tab-control {
+.tab-group .tab-button {
   font-size: var(--fxs);
   overflow: hidden;
   text-overflow: ellipsis;
-  border-bottom: 1px solid var(--border-item);
+  border: 1px solid var(--border-interactive);
   padding: 0.25rem 0.5rem;
+  flex: 1;
 }
 
-.tabs-container .tab-control:hover {
-  background: none;
-  border-color: var(--accent);
+.tab-group .tab-button:hover {
+  background: var(--bg-hover);
 }
 
-.tabs-container .tab-control.active {
-  border-color: var(--accent);
+.tab-group .tab-button.active {
+  background: var(--bg-accent);
+  border-color: var(--bg-accent);
+  font-weight: bold;
 }
 
 /* Infobox */

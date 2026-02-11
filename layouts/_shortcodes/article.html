@@ -1,4 +1,4 @@
 <article>
   <h3>{{ .Get 0 }}</h3>
-  <p>{{ .Inner | markdownify }}</p>
+  <p>{{ .Inner | strings.TrimSpace | .Page.RenderString }}</p>
 </article>

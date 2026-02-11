@@ -1,0 +1,12 @@
+{{ $id := .Get 0 }}
+{{ $safeID := $id | urlize | safeHTMLAttr }}
+{{ $activeTabs := $.Page.Store.Get "default-active-tabs" }}
+<div
+  id="tab-panel-{{ $safeID }}"
+  data-panel="tab-panel-{{ $safeID }}"
+  {{ if not (in $activeTabs $id) }}class="is-hidden"{{ end }}
+  aria-labelledby="tab-label-{{ $safeID }}"
+  role="tabpanel"
+  tabindex="0">
+  {{ .InnerDeindent | strings.TrimSpace | .Page.RenderString }}
+</div>
